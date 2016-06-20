@@ -1,0 +1,27 @@
+PODS:
+  - GCDWebServer (3.3.2):
+    - GCDWebServer/Core (= 3.3.2)
+  - GCDWebServer/Core (3.3.2)
+  - React/Core (0.27.2)
+  - React/RCTText (0.27.2):
+    - React/Core
+  - React/RCTWebSocket (0.27.2):
+    - React/Core
+
+DEPENDENCIES:
+  - GCDWebServer (~> 3.0)
+  - React/Core (from `./node_modules/react-native`)
+  - React/RCTText (from `./node_modules/react-native`)
+  - React/RCTWebSocket (from `./node_modules/react-native`)
+
+EXTERNAL SOURCES:
+  React:
+    :path: ./node_modules/react-native
+
+SPEC CHECKSUMS:
+  GCDWebServer: 2a375ec42839a41d7187d04e5b688d32fa5c4cd5
+  React: ed545be51aeb5c3988abb0b17bf174b87aac1a17
+
+PODFILE CHECKSUM: ff391f1814a1b3944008ffc1c8b650c806bb6849
+
+COCOAPODS: 1.0.1
