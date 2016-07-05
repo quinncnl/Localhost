@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6231A8F91D14F9C100111A06 /* RCTWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6231A8F81D14F9C100111A06 /* RCTWKWebView.m */; };
+		6231A8F91D14F9C100111A06 /* RCTWKWebViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6231A8F81D14F9C100111A06 /* RCTWKWebViewManager.m */; };
 		626514701D13E7E100931917 /* EmbeddedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6265146F1D13E7E100931917 /* EmbeddedView.m */; };
+		62B050461D1D2E8B0022B9FC /* res in Resources */ = {isa = PBXBuildFile; fileRef = 62B050451D1D2E8B0022B9FC /* res */; };
+		62D5CA9F1D1BD9F200E43C3B /* RCTWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D5CA9E1D1BD9F200E43C3B /* RCTWKWebView.m */; };
 		62E8B0D51D13D91A00D64EDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E8B0D41D13D91A00D64EDD /* main.m */; };
 		62E8B0D81D13D91A00D64EDD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E8B0D71D13D91A00D64EDD /* AppDelegate.m */; };
 		62E8B0DB1D13D91A00D64EDD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E8B0DA1D13D91A00D64EDD /* ViewController.m */; };
@@ -21,11 +23,14 @@
 /* Begin PBXFileReference section */
 		2396911D910942EBAD0A33E2 /* Pods-Localhost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Localhost.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Localhost/Pods-Localhost.debug.xcconfig"; sourceTree = "<group>"; };
 		3B954A7DEED2E3F58BC3A708 /* libPods-Localhost.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Localhost.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6231A8F71D14F9C100111A06 /* RCTWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTWKWebView.h; sourceTree = "<group>"; };
-		6231A8F81D14F9C100111A06 /* RCTWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTWKWebView.m; sourceTree = "<group>"; };
+		6231A8F71D14F9C100111A06 /* RCTWKWebViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTWKWebViewManager.h; sourceTree = "<group>"; };
+		6231A8F81D14F9C100111A06 /* RCTWKWebViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTWKWebViewManager.m; sourceTree = "<group>"; };
 		6265146E1D13E7E100931917 /* EmbeddedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmbeddedView.h; sourceTree = "<group>"; };
 		6265146F1D13E7E100931917 /* EmbeddedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmbeddedView.m; sourceTree = "<group>"; };
 		626514721D13ED4800931917 /* Localhost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Localhost.entitlements; sourceTree = "<group>"; };
+		62B050451D1D2E8B0022B9FC /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		62D5CA9D1D1BD9F200E43C3B /* RCTWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTWKWebView.h; sourceTree = "<group>"; };
+		62D5CA9E1D1BD9F200E43C3B /* RCTWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTWKWebView.m; sourceTree = "<group>"; };
 		62E8B0D01D13D91A00D64EDD /* Localhost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localhost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E8B0D41D13D91A00D64EDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62E8B0D61D13D91A00D64EDD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		4245A62233503E73B08C3B33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62B050451D1D2E8B0022B9FC /* res */,
 				3B954A7DEED2E3F58BC3A708 /* libPods-Localhost.a */,
 			);
 			name = Frameworks;
@@ -85,8 +91,10 @@
 				62E8B0D71D13D91A00D64EDD /* AppDelegate.m */,
 				62E8B0D91D13D91A00D64EDD /* ViewController.h */,
 				62E8B0DA1D13D91A00D64EDD /* ViewController.m */,
-				6231A8F71D14F9C100111A06 /* RCTWKWebView.h */,
-				6231A8F81D14F9C100111A06 /* RCTWKWebView.m */,
+				6231A8F71D14F9C100111A06 /* RCTWKWebViewManager.h */,
+				6231A8F81D14F9C100111A06 /* RCTWKWebViewManager.m */,
+				62D5CA9D1D1BD9F200E43C3B /* RCTWKWebView.h */,
+				62D5CA9E1D1BD9F200E43C3B /* RCTWKWebView.m */,
 				6265146E1D13E7E100931917 /* EmbeddedView.h */,
 				6265146F1D13E7E100931917 /* EmbeddedView.m */,
 				62E8B0DC1D13D91A00D64EDD /* Main.storyboard */,
@@ -182,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62E8B0E31D13D91A00D64EDD /* LaunchScreen.storyboard in Resources */,
+				62B050461D1D2E8B0022B9FC /* res in Resources */,
 				62E8B0E01D13D91A00D64EDD /* Assets.xcassets in Resources */,
 				62E8B0DE1D13D91A00D64EDD /* Main.storyboard in Resources */,
 			);
@@ -243,10 +252,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				62E8B0DB1D13D91A00D64EDD /* ViewController.m in Sources */,
-				6231A8F91D14F9C100111A06 /* RCTWKWebView.m in Sources */,
+				6231A8F91D14F9C100111A06 /* RCTWKWebViewManager.m in Sources */,
 				62E8B0D81D13D91A00D64EDD /* AppDelegate.m in Sources */,
 				626514701D13E7E100931917 /* EmbeddedView.m in Sources */,
 				62E8B0D51D13D91A00D64EDD /* main.m in Sources */,
+				62D5CA9F1D1BD9F200E43C3B /* RCTWKWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

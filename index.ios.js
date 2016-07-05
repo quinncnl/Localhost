@@ -10,11 +10,16 @@ var {
   TouchableOpacity,
   View,
   Navigator,
-  AppRegistry
+  AppRegistry,
+  Animated,
+  LayoutAnimation,
+  RCTNetworking,
+  Image
 } = ReactNative;
 
 import { requireNativeComponent } from 'react-native';
-var RCTWKWebView = requireNativeComponent('RCTWKWebView', null);
+
+var RCTWKWebViewManager = requireNativeComponent('RCTWKWebView', null);
 
 const styles = StyleSheet.create({
   container: {
@@ -42,7 +47,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
   },
   button: {
-
     flex: 0,
     height: 28,
     padding: 7,
@@ -57,10 +61,21 @@ const styles = StyleSheet.create({
 
   buttonText: {
     fontSize: 11,
+  },
+  toolbarButton: {
+    width: 22,
+    height: 22
   }
 });
 
 var WebViewExample = React.createClass({
+
+  getInitialState() {
+    return {
+      height: 40,
+      barPadding: 5
+    };
+  },
 
   render: function() {
     return (
@@ -69,19 +84,31 @@ var WebViewExample = React.createClass({
           <Text style={styles.titleText}>Tsing</Text>
         </View>
 
-        <RCTWKWebView style={styles.container}></RCTWKWebView>
+        <RCTWKWebViewManager onChange={(e) => {
+          console.debug(e.type);
 
+          switch (e.type) {
+            case "down":
+              LayoutAnimation.easeInEaseOut();
+              this.setState({height: 0, barPadding: 0});
+            break;
+            case "up":
+              LayoutAnimation.easeInEaseOut();
+              this.setState({height: 40, barPadding: 5});
+            break;
+          }
+        }} style={styles.container} />
 
-        <View style={styles.bottomBar}>
+        <View style={[styles.bottomBar, {height: this.state.height, paddingTop: this.state.barPadding, paddingBottom: this.state.barPadding}]}>
           <TouchableOpacity onPress={this.pressGoButton}>
             <View style={styles.button}>
-              <Text style={styles.buttonText}>Home</Text>
+              <Image style={styles.toolbarButton} source={{uri: './res/backward.png'}} />
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={this.pressGoButton}>
             <View style={styles.button}>
-              <Text style={styles.buttonText}>Refresh</Text>
+              <Image style={styles.toolbarButton} source={{uri: "./res/forward.png" }} />
             </View>
           </TouchableOpacity>
 
@@ -92,7 +119,6 @@ var WebViewExample = React.createClass({
           </TouchableOpacity>
 
         </View>
-
 
       </View>
     );
